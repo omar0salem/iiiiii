@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const conv = require('number-to-words')
 
-const prefix = '4'
+const prefix = 'o'
 
 const client = new Discord.Client({ disableEveryone: true});
 
@@ -22,11 +22,11 @@ client.on('warn', console.warn);
 client.on('error', console.error);
 
 client.on('ready', () => {
-    console.log(`Created By: MohmaedAlhassny`);
-    console.log(`Developed By: ! Abdulrhman ♥`);
+    console.log(`Created By: مدري`);
+    console.log(`Developed By: ! مدري ♥`);
     console.log(`Guilds: ${client.guilds.size}`);
     console.log(`Users: ${client.users.size}`);
-    client.user.setActivity('Alhassny Orders.',{type: 'WATCHING'});
+    client.user.setActivity('omar salem.',{type: 'WATCHING'});
 });
 
 client.on('message', async msg => {
@@ -135,7 +135,7 @@ let dur = `${hrs}${min}${sec}`
 			voiceChannel: voiceChannel,
 			connection: null,
 			songs: [],
-			volume: 50,
+			volume: 100,
 			playing: true,
       repeating: false
 		};
@@ -408,7 +408,7 @@ function play(guild, song) {
 
 //admin
 
-const devs = ['449313863494664214','228401267263668224','326131905743421440'];
+const devs = ['519312154558464021'];
 
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
@@ -475,5 +475,6 @@ client.on('message', message => {
     message.author.send(helplist);
   }
 });
+
 
 client.login(process.env.TOKEN);
