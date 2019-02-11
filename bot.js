@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const conv = require('number-to-words')
 
-const prefix = 'o'
+const prefix = '%'
 
 const client = new Discord.Client({ disableEveryone: true});
 
@@ -26,7 +26,6 @@ client.on('ready', () => {
     console.log(`Developed By: ! مدري ♥`);
     console.log(`Guilds: ${client.guilds.size}`);
     console.log(`Users: ${client.users.size}`);
-    client.user.setActivity('omar salem.',{type: 'WATCHING'});
 });
 
 client.on('message', async msg => {
@@ -413,7 +412,7 @@ const devs = ['519312154558464021'];
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
     if (message.content.startsWith(prefix + 'setStreaming')) {
-      if (!devs.includes(message.author.id)) return message.channel.send("<@449313863494664214> only this guy can do restart the bot so don't try again :wink:.");
+      if (!devs.includes(message.author.id)) return message.channel.send("<@519312154558464021> only this guy can do restart the bot so don't try again :wink:.");
       message.delete();
       client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
 
